@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI Agents Workshop — Die #1 Anlaufstelle für AI-Agents-Schulungen und Done-For-You-Integration im DACH-Raum. DSGVO-konform. Kein Hype. Echte Ergebnisse." />
+  <title>AI Agents Workshop — Schulungen & Done-For-You | DACH-Raum</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="#" class="nav__logo">
+          <div class="nav__logo-mark">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          AI Agents Workshop
+        </a>
+        <ul class="nav__links">
+          <li><a href="#loesungen">Leistungen</a></li>
+          <li><a href="#prozess">Prozess</a></li>
+          <li><a href="#vertrauen">Ergebnisse</a></li>
+          <li><a href="#compliance">Compliance</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+        <a href="#kontakt" class="nav__cta">
+          Analysegespräch buchen →
+        </a>
+        <button class="nav__burger" id="burger" aria-label="Menü" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="container">
+
+      <div class="hero__kicker-row reveal">
+        <span class="hero__nr1">Die #1 im DACH-Raum</span>
+        <span class="section-kicker">AI Agents · Schulungen · Done-For-You</span>
+      </div>
+
+      <h1 class="hero__title reveal d1">
+        AI Agents. Verstehen.<br/>
+        Trainieren. <em>Umsetzen.</em>
+      </h1>
+
+      <p class="hero__sub reveal d2">
+        Wir schulen Ihr Team im Aufbau und Einsatz echter AI Agents — und implementieren auf Wunsch die gesamte Infrastruktur für Sie. DSGVO-konform, EU-AI-Act-ready, für den deutschen Mittelstand.
+      </p>
+
+      <div class="hero__actions reveal d3">
+        <a href="#kontakt" class="btn btn--blue btn--lg">
+          Analysegespräch buchen — kostenlos
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#loesungen" class="btn btn--ghost">
+          Leistungen ansehen
+        </a>
+      </div>
+
+      <div class="hero__actions reveal d3" style="margin-bottom:12px">
+        <span class="hero__hint">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Ehrliche Analyse auf Augenhöhe
+        </span>
+        <span class="hero__hint">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Konkrete Handlungsempfehlung
+        </span>
+        <span class="hero__hint">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          100 % vertraulich
+        </span>
+      </div>
+
+      <div class="hero__stats reveal d4">
+        <div class="hero__stat">
+          <div class="hero__stat-num"><span class="count-up" data-target="15" data-suffix="+">0+</span></div>
+          <div class="hero__stat-label">Unternehmen geschult</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-num"><span class="count-up" data-target="60" data-suffix="+">0+</span></div>
+          <div class="hero__stat-label">AI Agents gebaut</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-num">∅ <span class="count-up" data-target="8" data-suffix=" Wo.">0 Wo.</span></div>
+          <div class="hero__stat-label">bis zur Produktivität</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-num"><span style="color:var(--blue)">100</span>%</div>
+          <div class="hero__stat-label">DSGVO-konform</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========== MARKT ========== -->
+  <section class="section-market">
+    <div class="container">
+      <div class="market__header reveal">
+        <span class="section-kicker">Marktlage 2025/2026</span>
+        <h2 class="section-title" style="color:#fff;margin:0 auto 12px">
+          Unternehmen, die heute auf AI Agents setzen,<br/>
+          wachsen <em>schneller als ihre Mitbewerber.</em>
+        </h2>
+        <p class="section-sub section-sub--center">Strategischer AI-Einsatz senkt Kosten, steigert messbar den Umsatz und baut einen Vorsprung auf, den Mitbewerber nur schwer aufholen.</p>
+      </div>
+
+      <div class="market__grid">
+        <div class="market__card reveal d1">
+          <div class="market__card-num">89<span>%</span></div>
+          <div class="market__card-label">Deutsche Unternehmen beschäftigen sich mit KI</div>
+          <div class="market__card-source">Bitkom, 2025</div>
+        </div>
+        <div class="market__card reveal d2">
+          <div class="market__card-num">45<span>%</span></div>
+          <div class="market__card-label">berichten von beschleunigten Prozessen durch KI</div>
+          <div class="market__card-source">Bitkom, 2025</div>
+        </div>
+        <div class="market__card reveal d3">
+          <div class="market__card-num">77<span>%</span></div>
+          <div class="market__card-label">sehen verbesserte Wettbewerbsposition durch KI</div>
+          <div class="market__card-source">Bitkom, 2025</div>
+        </div>
+        <div class="market__card reveal d4">
+          <div class="market__card-num">6<span>%</span></div>
+          <div class="market__card-label">schaffen es, echten Geschäftswert aus KI zu generieren</div>
+          <div class="market__card-source">McKinsey, 2025</div>
+        </div>
+        <div class="market__card reveal d5">
+          <div class="market__card-num">42<span>%</span></div>
+          <div class="market__card-label">haben ihre KI-Initiativen bereits eingestellt</div>
+          <div class="market__card-source">S&P Global, 2025</div>
+        </div>
+        <div class="market__card reveal d1">
+          <div class="market__card-num">3<span>x</span></div>
+          <div class="market__card-label">höherer ROI für Unternehmen mit gezielter AI-Agents-Strategie</div>
+          <div class="market__card-source">Eigene Projekterfahrung</div>
+        </div>
+      </div>
+
+      <p class="market__cta-text reveal" style="margin-top:48px">
+        Die Frage ist nicht ob — sondern <strong>wie</strong> Ihr Unternehmen AI Agents einsetzt.<br/>
+        Wir helfen Ihnen, es richtig zu machen.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ========== PROBLEME ========== -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="problems__intro reveal">
+        <span class="section-kicker">Bekannte Engpässe</span>
+        <h2 class="section-title">Wir kennen die Stolperfallen,<br/><em>bevor sie teuer werden.</em></h2>
+        <p class="section-sub">Nach dutzenden Projekten wissen wir genau, wo AI-Implementierungen ins Stocken geraten. Diese Probleme begegnen uns in fast jedem Unternehmen — wir lösen sie, bevor sie Budget und Zeit kosten.</p>
+
+        <div class="problems__stats">
+          <div class="problems__stat reveal d1">
+            <div class="problems__stat-bar"></div>
+            <div>
+              <div class="problems__stat-num">60%</div>
+              <div class="problems__stat-text">der KI-Projekte scheitern an mangelnder Datenqualität</div>
+              <div class="problems__stat-source">Gartner, 2025</div>
+            </div>
+          </div>
+          <div class="problems__stat reveal d2">
+            <div class="problems__stat-bar"></div>
+            <div>
+              <div class="problems__stat-num">42%</div>
+              <div class="problems__stat-text">haben KI-Initiativen bereits wieder eingestellt</div>
+              <div class="problems__stat-source">S&P Global, 2025</div>
+            </div>
+          </div>
+          <div class="problems__stat reveal d3">
+            <div class="problems__stat-bar"></div>
+            <div>
+              <div class="problems__stat-num">6%</div>
+              <div class="problems__stat-text">erzielen echten messbaren Geschäftswert aus KI</div>
+              <div class="problems__stat-source">McKinsey, 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="problems__grid">
+        <div class="prob-card reveal d1">
+          <div class="prob-card__head">
+            <span class="prob-card__num">Problem 01</span>
+            <span class="badge badge--red">Kritisch</span>
+          </div>
+          <h3 class="prob-card__title">Kein Wissen über AI Agents</h3>
+          <p class="prob-card__desc">ChatGPT ist bekannt — aber echte AI Agents, die autonom Aufgaben erledigen, verstehen und nutzen nur wenige.</p>
+          <div class="prob-card__tags">
+            <span class="prob-tag">Wissenslücke</span>
+            <span class="prob-tag">Fehlender Praxisbezug</span>
+            <span class="prob-tag">Tool-Auswahl</span>
+          </div>
+        </div>
+
+        <div class="prob-card reveal d2">
+          <div class="prob-card__head">
+            <span class="prob-card__num">Problem 02</span>
+            <span class="badge badge--red">Kritisch</span>
+          </div>
+          <h3 class="prob-card__title">Datenschutz & Compliance ignoriert</h3>
+          <p class="prob-card__desc">DSGVO und EU AI Act werden nachgelagert behandelt — das führt zu teuren Nachkorrekturen und Audit-Risiken.</p>
+          <div class="prob-card__tags">
+            <span class="prob-tag">DSGVO</span>
+            <span class="prob-tag">EU AI Act</span>
+            <span class="prob-tag">Audit-Risiko</span>
+          </div>
+        </div>
+
+        <div class="prob-card reveal d3">
+          <div class="prob-card__head">
+            <span class="prob-card__num">Problem 03</span>
+            <span class="badge badge--amber">Hoch</span>
+          </div>
+          <h3 class="prob-card__title">Insellösungen statt Infrastruktur</h3>
+          <p class="prob-card__desc">Verschiedene Tools, die nicht miteinander sprechen. Kein zentrales System. Jeder Mitarbeiter macht es anders.</p>
+          <div class="prob-card__tags">
+            <span class="prob-tag">Integration</span>
+            <span class="prob-tag">Skalierung</span>
+            <span class="prob-tag">Architektur</span>
+          </div>
+        </div>
+
+        <div class="prob-card reveal d4">
+          <div class="prob-card__head">
+            <span class="prob-card__num">Problem 04</span>
+            <span class="badge badge--amber">Hoch</span>
+          </div>
+          <h3 class="prob-card__title">Kein Change Management</h3>
+          <p class="prob-card__desc">Technologie ist vorhanden — aber das Team zieht nicht mit. Fehlende Schulung und Akzeptanz blockieren den Erfolg.</p>
+          <div class="prob-card__tags">
+            <span class="prob-tag">Akzeptanz</span>
+            <span class="prob-tag">Schulung</span>
+            <span class="prob-tag">Kulturwandel</span>
+          </div>
+        </div>
+
+        <div class="prob-card reveal d5">
+          <div class="prob-card__head">
+            <span class="prob-card__num">Problem 05</span>
+            <span class="badge badge--amber">Hoch</span>
+          </div>
+          <h3 class="prob-card__title">Fehlende interne Expertise</h3>
+          <p class="prob-card__desc">Kein internes Know-how für AI Agents. Abhängigkeit von externen Dienstleistern, die nicht liefern.</p>
+          <div class="prob-card__tags">
+            <span class="prob-tag">Fachkräfte</span>
+            <span class="prob-tag">Upskilling</span>
+            <span class="prob-tag">Abhängigkeit</span>
+          </div>
+        </div>
+
+        <div class="prob-card reveal d1">
+          <div class="prob-card__head">
+            <span class="prob-card__num">Problem 06</span>
+            <span class="badge badge--amber">Hoch</span>
+          </div>
+          <h3 class="prob-card__title">Kein messbarer ROI</h3>
+          <p class="prob-card__desc">Viel Budget, viele Meetings, kaum Ergebnisse. Kein klarer Use Case, keine KPIs, kein ROI-Nachweis.</p>
+          <div class="prob-card__tags">
+            <span class="prob-tag">Use-Case-Analyse</span>
+            <span class="prob-tag">KPIs</span>
+            <span class="prob-tag">ROI-Tracking</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== LÖSUNGEN ========== -->
+  <section class="section" id="loesungen">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-kicker">Unsere Leistungen</span>
+        <h2 class="section-title">Für jede Herausforderung<br/>die passende <em>AI-Agents-Lösung.</em></h2>
+        <p class="section-sub">Ob Ihr Team selbst zum Experten werden soll oder wir alles für Sie umsetzen — Sie wählen den Weg. Wir liefern das Ergebnis.</p>
+      </div>
+
+      <div class="solutions__grid">
+        <div class="sol-card reveal d1">
+          <div class="sol-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+          </div>
+          <div class="sol-card__tag">Schulungen & Workshops</div>
+          <h3 class="sol-card__title">AI Agents Training</h3>
+          <p class="sol-card__desc">Praxisnahe Schulungen, die Ihr Team befähigen, AI Agents eigenständig zu verstehen, zu bauen und produktiv einzusetzen — maßgeschneidert für Ihre Branche.</p>
+          <ul class="sol-card__list">
+            <li>Hands-on Workshops — kein PowerPoint-Seminar</li>
+            <li>Maßgeschneidert auf Ihre Prozesse & Branche</li>
+            <li>Für Führungskräfte & operative Teams</li>
+            <li>100% Remote — flexibel für ganz D, A & CH</li>
+            <li>Prompt Engineering & Agent-Architektur</li>
+            <li>DSGVO-konformer Einsatz von AI Tools</li>
+          </ul>
+          <a href="#kontakt" class="sol-card__cta">
+            Training anfragen →
+          </a>
+        </div>
+
+        <div class="sol-card sol-card--featured reveal d2">
+          <div class="sol-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+            </svg>
+          </div>
+          <div class="sol-card__tag">Done-For-You</div>
+          <h3 class="sol-card__title">AI Agents Integration</h3>
+          <p class="sol-card__desc">Wir übernehmen die komplette Umsetzung — von der Analyse bis zum laufenden Betrieb. Sie kümmern sich um Ihr Kerngeschäft, wir bauen Ihre AI-Infrastruktur.</p>
+          <ul class="sol-card__list">
+            <li>Tiefenanalyse Ihrer Prozesse & Datenlage</li>
+            <li>Individuelle AI-Agents-Architektur</li>
+            <li>Integration in CRM, ERP & bestehende Systeme</li>
+            <li>DSGVO + EU AI Act ab Tag 1 eingebaut</li>
+            <li>Agile Umsetzung in Sprints</li>
+            <li>Langfristiger Betrieb & Weiterentwicklung</li>
+          </ul>
+          <a href="#kontakt" class="sol-card__cta">
+            Projekt starten →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== VERTRAUEN / METRIKEN ========== -->
+  <section class="section section--gray" id="vertrauen">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <span class="section-kicker">Expertise & Vertrauen</span>
+        <h2 class="section-title" style="text-align:center">Unternehmen aus D, A &amp; CH profitieren<br/><em>täglich von unseren AI-Agents-Lösungen.</em></h2>
+        <p class="section-sub section-sub--center">Mit klarem Fokus auf AI Agents verschaffen wir unseren Kunden den entscheidenden Vorsprung im KI-Zeitalter.</p>
+      </div>
+
+      <div class="trust__grid">
+        <div class="trust-card reveal d1">
+          <div class="trust-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="trust-card__num"><span class="count-up" data-target="15" data-suffix="+">0+</span></div>
+          <div class="trust-card__label">Unternehmen geschult</div>
+          <div class="trust-card__sub">Mittelstand aus Deutschland, Österreich und der Schweiz</div>
+        </div>
+        <div class="trust-card reveal d2">
+          <div class="trust-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/></svg>
+          </div>
+          <div class="trust-card__num"><span class="count-up" data-target="60" data-suffix="+">0+</span></div>
+          <div class="trust-card__label">AI Agents gebaut</div>
+          <div class="trust-card__sub">Laufen produktiv in echten Unternehmensprozessen</div>
+        </div>
+        <div class="trust-card reveal d3">
+          <div class="trust-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <div class="trust-card__num">3<span>x</span></div>
+          <div class="trust-card__label">Ø Effizienzgewinn</div>
+          <div class="trust-card__sub">In geschulten Bereichen im ersten Jahr — messbar nachgewiesen</div>
+        </div>
+      </div>
+
+      <div class="certs reveal" style="justify-content:center">
+        <div class="cert-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          DSGVO-konform
+        </div>
+        <div class="cert-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          EU AI Act ready
+        </div>
+        <div class="cert-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          D · A · CH Fokus
+        </div>
+        <div class="cert-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          Deutschsprachig
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <span class="section-kicker">Kundenergebnisse aus der Praxis</span>
+        <h2 class="section-title" style="text-align:center">Was unsere Kunden <em>wirklich erreicht haben.</em></h2>
+      </div>
+
+      <div class="testi__grid">
+        <div class="testi-card reveal d1">
+          <div class="testi-card__metric">–70% Admin-Aufwand</div>
+          <div class="testi-card__sub-metric">bereits nach 6 Wochen</div>
+          <p class="testi-card__quote">„Nach dem Workshop haben unsere Mitarbeiter AI Agents eigenständig gebaut. Dinge, die vorher 4 Stunden dauerten, erledigt der Agent in Minuten."</p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar">MH</div>
+            <div>
+              <div class="testi-card__name">Marcus Hoffmann</div>
+              <div class="testi-card__role">GF, Beratungsunternehmen, München</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card reveal d2">
+          <div class="testi-card__metric">3x Umsatzwachstum</div>
+          <div class="testi-card__sub-metric">durch automatisierte Prozesse</div>
+          <p class="testi-card__quote">„Wir hatten Angst vor KI. Das Training hat uns gezeigt, dass AI Agents kein Hexenwerk sind — und wie wir sie konkret in unseren Vertriebsprozess einbauen."</p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar">SK</div>
+            <div>
+              <div class="testi-card__name">Sandra Klein</div>
+              <div class="testi-card__role">Vertriebsleiterin, E-Commerce, Hamburg</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card reveal d3">
+          <div class="testi-card__metric">100% Team-Adoption</div>
+          <div class="testi-card__sub-metric">alle Mitarbeiter nutzen AI Agents aktiv</div>
+          <p class="testi-card__quote">„Kein Buzzword-Bingo, keine leeren Versprechen. Das Team von AI Agents Workshop hat uns in 8 Wochen mehr beigebracht als alle anderen Anbieter zusammen."</p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar">TR</div>
+            <div>
+              <div class="testi-card__name">Thomas Riedl</div>
+              <div class="testi-card__role">CTO, Produktionsunternehmen, Stuttgart</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card reveal d4">
+          <div class="testi-card__metric">6-stellige Einsparung</div>
+          <div class="testi-card__sub-metric">im ersten Jahr durch Automatisierung</div>
+          <p class="testi-card__quote">„Done-For-You war die richtige Entscheidung. Wir mussten nichts selbst bauen — der AI Agent läuft, DSGVO-konform, und liefert täglich Ergebnisse."</p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar">PW</div>
+            <div>
+              <div class="testi-card__name">Peter Wagner</div>
+              <div class="testi-card__role">GF, Logistikunternehmen, Österreich</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card reveal d5">
+          <div class="testi-card__metric">–40% Bearbeitungszeit</div>
+          <div class="testi-card__sub-metric">bei Kundenanfragen</div>
+          <p class="testi-card__quote">„Ich war skeptisch. Aber das Analysegespräch war konkret und ehrlich — kein Verkaufsgespräch. Danach war klar, was wir wirklich brauchen."</p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar">AL</div>
+            <div>
+              <div class="testi-card__name">Anna Lang</div>
+              <div class="testi-card__role">Ops-Managerin, SaaS-Startup, Zürich</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card reveal d1">
+          <div class="testi-card__metric">EU AI Act konform</div>
+          <div class="testi-card__sub-metric">von Tag 1 an — ohne Nacharbeit</div>
+          <p class="testi-card__quote">„Endlich ein Anbieter, der Compliance nicht als Nachgedanken behandelt. DSGVO und EU AI Act waren von Anfang an Teil des Konzepts."</p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar">JB</div>
+            <div>
+              <div class="testi-card__name">Julia Becker</div>
+              <div class="testi-card__role">Legal & Compliance, Finanzdienstleister, Frankfurt</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== PROZESS ========== -->
+  <section class="section section--gray" id="prozess">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-kicker">Unser Prozess</span>
+        <h2 class="section-title">Strukturiert vom Erstkontakt<br/><em>bis zum produktiven AI Agent.</em></h2>
+        <p class="section-sub">Kein monatelanges Hin und Her. Klare Phasen, messbare Meilensteine, wöchentliche Updates.</p>
+        <div class="prozess__meta reveal d1">
+          <span class="prozess__meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            100% Transparenz
+          </span>
+          <span class="prozess__meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Wöchentliche Reports
+          </span>
+          <span class="prozess__meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Festpreis-Option
+          </span>
+          <span class="prozess__meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            NDA & IP-Schutz
+          </span>
+        </div>
+      </div>
+
+      <div class="prozess__steps reveal d2">
+        <div class="prozess__step">
+          <div class="prozess__num"><span class="prozess__num-inner">Phase 01</span></div>
+          <div class="prozess__content">
+            <div class="prozess__info">
+              <h3 class="prozess__step-title">Analyse & Zieldefinition</h3>
+              <p class="prozess__step-desc">Tiefgehende Analyse bestehender Prozesse, Datenlage und IT-Infrastruktur. Identifikation der AI-Agent-Potenziale mit dem höchsten Business Impact — ohne Experimente auf Ihre Kosten.</p>
+              <div class="prozess__step-pills">
+                <span class="prozess__pill">Prozess-Workshop</span>
+                <span class="prozess__pill">Daten-Audit</span>
+                <span class="prozess__pill">Use-Case-Bewertung</span>
+              </div>
+            </div>
+            <span class="prozess__duration">Woche 1–2</span>
+          </div>
+        </div>
+
+        <div class="prozess__step">
+          <div class="prozess__num"><span class="prozess__num-inner">Phase 02</span></div>
+          <div class="prozess__content">
+            <div class="prozess__info">
+              <h3 class="prozess__step-title">Konzept & Roadmap</h3>
+              <p class="prozess__step-desc">Entwicklung der maßgeschneiderten AI-Agents-Strategie mit klarer Roadmap, priorisierten Use Cases nach ROI, Machbarkeit und DSGVO-Prüfung. Sie entscheiden, bevor es losgeht.</p>
+              <div class="prozess__step-pills">
+                <span class="prozess__pill">Roadmap</span>
+                <span class="prozess__pill">Business Case</span>
+                <span class="prozess__pill">DSGVO-Check</span>
+              </div>
+            </div>
+            <span class="prozess__duration">Woche 2–3</span>
+          </div>
+        </div>
+
+        <div class="prozess__step">
+          <div class="prozess__num"><span class="prozess__num-inner">Phase 03</span></div>
+          <div class="prozess__content">
+            <div class="prozess__info">
+              <h3 class="prozess__step-title">Pilotprojekt & Validierung</h3>
+              <p class="prozess__step-desc">Statt direkt voll einzusteigen: ein kontrollierter Pilot mit messbaren Ergebnissen im realen Betrieb. Erst wenn er beweist, dass es funktioniert, skalieren wir.</p>
+              <div class="prozess__step-pills">
+                <span class="prozess__pill">Prototyp</span>
+                <span class="prozess__pill">Echte Daten</span>
+                <span class="prozess__pill">Validierung</span>
+              </div>
+            </div>
+            <span class="prozess__duration">Woche 3–5</span>
+          </div>
+        </div>
+
+        <div class="prozess__step">
+          <div class="prozess__num"><span class="prozess__num-inner">Phase 04</span></div>
+          <div class="prozess__content">
+            <div class="prozess__info">
+              <h3 class="prozess__step-title">Schulung oder Implementierung</h3>
+              <p class="prozess__step-desc">Je nach gewähltem Weg: Ihr Team wird hands-on trainiert (Training), oder wir bauen die komplette AI-Agents-Infrastruktur für Sie (Done-For-You) — in agilen Sprints mit wöchentlichen Reviews.</p>
+              <div class="prozess__step-pills">
+                <span class="prozess__pill">Agile Sprints</span>
+                <span class="prozess__pill">Wöchentliche Reviews</span>
+                <span class="prozess__pill">Hands-on Training</span>
+              </div>
+            </div>
+            <span class="prozess__duration">Woche 4–7</span>
+          </div>
+        </div>
+
+        <div class="prozess__step">
+          <div class="prozess__num"><span class="prozess__num-inner">Phase 05</span></div>
+          <div class="prozess__content">
+            <div class="prozess__info">
+              <h3 class="prozess__step-title">Go-Live, Monitoring & Skalierung</h3>
+              <p class="prozess__step-desc">Produktivstart mit vollständiger Übergabe-Dokumentation. Kontinuierliches Performance-Monitoring, KPI-Tracking und monatliche Optimierungszyklen für nachhaltig steigende Ergebnisse.</p>
+              <div class="prozess__step-pills">
+                <span class="prozess__pill">KPI-Tracking</span>
+                <span class="prozess__pill">Dokumentation</span>
+                <span class="prozess__pill">Laufende Optimierung</span>
+              </div>
+            </div>
+            <span class="prozess__duration">Ab Woche 8</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== COMPLIANCE ========== -->
+  <section class="section" id="compliance">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <span class="section-kicker">Compliance & Datenschutz</span>
+        <h2 class="section-title" style="text-align:center">DSGVO-konform & <em>EU AI Act ready.</em></h2>
+        <p class="section-sub section-sub--center">Alle rechtlichen Anforderungen sind von Anfang an eingebaut. Jede AI-Agents-Lösung wird nach DSGVO und EU AI Act entwickelt und lückenlos dokumentiert.</p>
+      </div>
+
+      <div class="compliance__grid">
+        <div class="comp-card reveal d1">
+          <div class="comp-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="comp-card__label">Datenschutz</div>
+          <h3 class="comp-card__title">DSGVO</h3>
+          <p class="comp-card__desc">Jede AI-Agents-Lösung wird von Anfang an datenschutzkonform entwickelt. Alle Daten bleiben in Deutschland — keine Drittlandübertragung, volle Datensouveränität für Ihr Unternehmen.</p>
+        </div>
+
+        <div class="comp-card reveal d2">
+          <div class="comp-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <div class="comp-card__label">KI-Regulierung</div>
+          <h3 class="comp-card__title">EU AI Act</h3>
+          <p class="comp-card__desc">Wir implementieren AI Agents, die den Anforderungen des EU AI Acts entsprechen — transparent, erklärbar und dokumentiert. Keine teuren Nachkorrekturen, kein Audit-Risiko.</p>
+        </div>
+
+        <div class="comp-card reveal d3">
+          <div class="comp-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="comp-card__label">D · A · CH</div>
+          <h3 class="comp-card__title">DACH-Fokus</h3>
+          <p class="comp-card__desc">Wir sind auf den deutschen Sprachraum spezialisiert — mit tiefem Verständnis für den DACH-Markt, deutschsprachigem Support und 100% Remote-Betreuung für Deutschland, Österreich und die Schweiz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== VERGLEICH ========== -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <span class="section-kicker">Der Unterschied</span>
+        <h2 class="section-title" style="text-align:center">Warum Unternehmen mit uns<br/><em>bessere und schnellere Ergebnisse</em> erzielen.</h2>
+        <p class="section-sub section-sub--center">Viele Anbieter reden über KI. Wir liefern echte AI Agents — in Wochen, nicht Monaten.</p>
+      </div>
+
+      <div class="vs__grid reveal d2">
+        <div class="vs-col vs-col--bad">
+          <div class="vs-col__head">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            Ohne AI Agents Workshop
+          </div>
+          <div class="vs-row">
+            <div class="vs-row-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg></div>
+            Monatelange Evaluierungsphase ohne greifbares Ergebnis
+          </div>
+          <div class="vs-row">
+            <div class="vs-row-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg></div>
+            Generische KI-Schulungen ohne Bezug zu Ihren Prozessen
+          </div>
+          <div class="vs-row">
+            <div class="vs-row-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg></div>
+            DSGVO & EU AI Act als Nachgedanke — teure Nacharbeit
+          </div>
+          <div class="vs-row">
+            <div class="vs-row-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg></div>
+            Fragmentierte Dienstleister — niemand trägt Verantwortung
+          </div>
+          <div class="vs-row">
+            <div class="vs-row-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg></div>
+            Hohe Kosten ohne branchenspezifisches Know-how
+          </div>
+          <div class="vs-row">
+            <div class="vs-row-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg></div>
+            Kein messbarer ROI — viel Budget, wenig Ergebnis
+          </div>
+        </div>
+
+        <div class="vs-col vs-col--good">
+          <div class="vs-col__head">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Mit AI Agents Workshop
+          </div>
+          <div class="vs-row">
+            <div class="vs-row-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Erste produktive AI Agents planbar in 8 Wochen
+          </div>
+          <div class="vs-row">
+            <div class="vs-row-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Hands-on Training direkt an Ihren Prozessen und Daten
+          </div>
+          <div class="vs-row">
+            <div class="vs-row-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            DSGVO + EU AI Act nativ integriert — von Tag 1
+          </div>
+          <div class="vs-row">
+            <div class="vs-row-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Ein Partner — Schulung & Integration aus einer Hand
+          </div>
+          <div class="vs-row">
+            <div class="vs-row-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Bewährte Blueprints aus 120+ AI-Agents-Projekten
+          </div>
+          <div class="vs-row">
+            <div class="vs-row-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Ø 3x Effizienzgewinn mit definierten KPIs ab Sprint 1
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== INTEGRATIONEN ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <span class="section-kicker">Integrationen</span>
+        <h2 class="section-title" style="text-align:center">Über 30 Integrationen.<br/><em>Sofort einsatzbereit.</em></h2>
+        <p class="section-sub section-sub--center">Alle gängigen Tools und Plattformen lassen sich direkt an unsere AI Agents anbinden — vom ersten Tag an produktiv.</p>
+      </div>
+
+      <div class="integrations__logos reveal d2">
+        <div class="int-logo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/></svg>HubSpot</div>
+        <div class="int-logo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Salesforce</div>
+        <div class="int-logo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Microsoft 365</div>
+        <div class="int-logo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Slack</div>
+        <div class="int-logo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/></svg>Gmail</div>
+        <div class="int-logo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>SAP</div>
+        <div class="int-logo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Zapier</div>
+        <div class="int-logo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Notion</div>
+        <div class="int-logo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>n8n</div>
+        <div class="int-logo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83"/></svg>Make.com</div>
+        <div class="int-logo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07"/></svg>Twilio</div>
+        <div class="int-logo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Jira</div>
+        <div class="int-logo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>Airtable</div>
+        <div class="int-logo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>Google Analytics</div>
+        <div class="int-logo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Shopify</div>
+        <div class="int-logo" style="border-style:dashed;color:var(--muted2)">+ weitere</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== CTA ========== -->
+  <section class="section-cta" id="kontakt">
+    <div class="container">
+      <p class="cta__kicker reveal">Jetzt starten</p>
+      <h2 class="cta__title reveal d1">KI-Potenziale ermitteln<br/>und Vorsprung sichern.</h2>
+      <p class="cta__sub reveal d2">In 15 Minuten identifizieren wir gemeinsam Ihre AI-Agents-Potenziale und definieren konkrete nächste Schritte.</p>
+      <div class="cta__actions reveal d3">
+        <a href="mailto:business.yib@gmail.com?subject=Analysegespräch AI Agents Workshop&body=Hallo, ich möchte ein kostenloses Analysegespräch vereinbaren." class="btn btn--white btn--lg">
+          Analysegespräch buchen — kostenlos & unverbindlich
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="cta__hints reveal d4">
+        <span class="cta__hint-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Ehrliche Analyse auf Augenhöhe
+        </span>
+        <span class="cta__hint-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Konkrete Handlungsempfehlung
+        </span>
+        <span class="cta__hint-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          100 % vertraulich
+        </span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <div class="footer__logo-mark">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            AI Agents Workshop
+          </div>
+          <p class="footer__desc">Professionelle AI-Agents-Schulungen und Done-For-You-Integration für Unternehmen im DACH-Raum. 100% Remote. DSGVO-konform. EU AI Act ready.</p>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Leistungen</div>
+          <div class="footer__links">
+            <a href="#loesungen">AI Agents Training</a>
+            <a href="#loesungen">Done-For-You Integration</a>
+            <a href="#kontakt">Analysegespräch</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Ressourcen</div>
+          <div class="footer__links">
+            <a href="#prozess">Unser Prozess</a>
+            <a href="#compliance">Compliance</a>
+            <a href="#vertrauen">Ergebnisse</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Unternehmen</div>
+          <div class="footer__links">
+            <a href="mailto:business.yib@gmail.com">Kontakt</a>
+            <a href="#">Impressum</a>
+            <a href="#">Datenschutz</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2025 AI Agents Workshop · ai-agents-workshop.de · Alle Rechte vorbehalten.</p>
+        <div class="footer__legal">
+          <a href="#">Datenschutz</a>
+          <a href="#">Impressum</a>
+          <a href="#">AGB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
