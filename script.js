@@ -85,4 +85,35 @@
     });
   });
 
+  /* Mobile testimonial slider */
+  if (window.innerWidth < 768) {
+    var teCarousel = document.querySelector('.testi__carousel');
+    var teGrid = document.querySelector('.testi__grid');
+    var teDots = document.querySelectorAll('.testi__dot');
+    var teCards = teGrid ? Array.from(teGrid.querySelectorAll('.testi-card')) : [];
+    var teCur = 0, teTimer;
+
+    function teGoTo(i) {
+      teCur = (i + teCards.length) % teCards.length;
+      teGrid.style.transform = 'translateX(-' + (teCur * (teCards[0].offsetWidth + 12)) + 'px)';
+      teDots.forEach(function(d, j) { d.classList.toggle('testi__dot--active', j === teCur); });
+    }
+    function teStart() { teTimer = setInterval(function() { teGoTo(teCur + 1); }, 3500); }
+    function teStop() { clearInterval(teTimer); }
+
+    teDots.forEach(function(d, i) { d.addEventListener('click', function() { teStop(); teGoTo(i); teStart(); }); });
+
+    var teSx = 0;
+    if (teCarousel) {
+      teCarousel.addEventListener('touchstart', function(e) { teSx = e.touches[0].clientX; teStop(); }, { passive: true });
+      teCarousel.addEventListener('touchend', function(e) {
+        if (Math.abs(teSx - e.changedTouches[0].clientX) > 50)
+          teGoTo(teCur + (teSx > e.changedTouches[0].clientX ? 1 : -1));
+        teStart();
+      }, { passive: true });
+    }
+    teGoTo(0);
+    teStart();
+  }
+
 })();

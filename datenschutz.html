@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Datenschutzerklärung — AI Agents Workshop, betrieben von MINDSOUL INTERNATIONAL LLC" />
+  <title>Datenschutz — AI Agents Workshop</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .ds-hero {
+      padding: 160px 0 80px;
+      background: var(--ink);
+    }
+    .ds-hero__kicker {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--blue);
+      background: rgba(37,99,235,.12);
+      border: 1px solid rgba(37,99,235,.25);
+      border-radius: 100px;
+      padding: 6px 14px;
+      margin-bottom: 24px;
+    }
+    .ds-hero__title {
+      font-size: clamp(40px, 6vw, 64px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .ds-hero__meta {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .ds-hero__meta span {
+      font-size: 14px;
+      color: rgba(255,255,255,.4);
+    }
+    .ds-hero__meta strong {
+      color: rgba(255,255,255,.7);
+      font-weight: 500;
+    }
+    .ds-body {
+      background: var(--bg);
+      padding: 80px 0 120px;
+    }
+    .ds-layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .ds-toc {
+      position: sticky;
+      top: 100px;
+    }
+    .ds-toc__title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .ds-toc__list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .ds-toc__list a {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      padding: 7px 12px;
+      border-radius: 8px;
+      border-left: 2px solid transparent;
+      transition: all .15s;
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .ds-toc__list a:hover {
+      color: var(--ink);
+      background: rgba(37,99,235,.06);
+      border-left-color: var(--blue);
+    }
+    .ds-toc__divider {
+      height: 1px;
+      background: var(--border);
+      margin: 12px 0;
+    }
+    .ds-doc { min-width: 0; }
+    .ds-notice {
+      background: #EFF6FF;
+      border: 1px solid rgba(37,99,235,.25);
+      border-left: 4px solid var(--blue);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 56px;
+    }
+    .ds-notice__title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+    .ds-notice p {
+      font-size: 14px;
+      color: #334155;
+      line-height: 1.7;
+    }
+    .ds-section {
+      padding-top: 56px;
+      border-top: 1px solid var(--border);
+      margin-top: 56px;
+    }
+    .ds-section:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+    .ds-section__num {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+    .ds-section__title {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+    .ds-section h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 36px 0 12px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+    }
+    .ds-section h3:first-of-type { margin-top: 24px; padding-top: 0; border-top: none; }
+    .ds-section p {
+      font-size: 15px;
+      color: #334155;
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+    .ds-section ul, .ds-section ol {
+      margin: 12px 0 20px 24px;
+    }
+    .ds-section ul { list-style: disc; }
+    .ds-section ol { list-style: decimal; }
+    .ds-section li {
+      font-size: 15px;
+      color: #334155;
+      line-height: 1.75;
+      margin-bottom: 8px;
+    }
+    .ds-section a { color: var(--blue); text-decoration: none; }
+    .ds-section a:hover { text-decoration: underline; }
+    .ds-section strong { font-weight: 600; color: var(--ink); }
+    .ds-section em { font-style: italic; }
+    .ds-caps {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+    .ds-infobox {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .ds-infobox__row {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 12px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .ds-infobox__label {
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .ds-infobox__value { color: var(--muted); }
+    .ds-infobox__value a { color: var(--blue); }
+    .ds-stand {
+      margin-top: 64px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+    }
+    @media (max-width: 900px) {
+      .ds-layout { grid-template-columns: 1fr; gap: 0; }
+      .ds-toc { position: static; margin-bottom: 48px; }
+    }
+    @media (max-width: 600px) {
+      .ds-section__title { font-size: 20px; }
+      .ds-infobox__row { grid-template-columns: 1fr; gap: 2px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">
+          <div class="nav__logo-mark">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          AI Agents Workshop
+        </a>
+        <ul class="nav__links">
+          <li><a href="index.html#loesungen">Leistungen</a></li>
+          <li><a href="index.html#prozess">Prozess</a></li>
+          <li><a href="index.html#vertrauen">Ergebnisse</a></li>
+          <li><a href="index.html#compliance">Compliance</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
+        </ul>
+        <a href="index.html#kontakt" class="nav__cta">Analysegespräch buchen →</a>
+        <button class="nav__burger" id="burger" aria-label="Menü" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="ds-hero">
+    <div class="container">
+      <div class="ds-hero__kicker">Rechtliches</div>
+      <h1 class="ds-hero__title">Datenschutzerklärung</h1>
+      <div class="ds-hero__meta">
+        <span><strong>Stand:</strong> Mai 2026</span>
+        <span><strong>Verantwortlich:</strong> MINDSOUL INTERNATIONAL LLC</span>
+        <span><strong>Gilt für:</strong> ai-agents-workshop.de</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="ds-body">
+    <div class="container">
+      <div class="ds-layout">
+
+        <!-- TOC -->
+        <aside class="ds-toc">
+          <div class="ds-toc__title">Inhalt</div>
+          <ul class="ds-toc__list">
+            <li><a href="#ueberblick">1. Datenschutz auf einen Blick</a></li>
+            <li><a href="#pflicht">2. Allgemeine Pflichtinformationen</a></li>
+            <li><a href="#hosting">3. Hosting</a></li>
+            <li><a href="#datenerfassung">4. Datenerfassung auf dieser Website</a></li>
+            <li><a href="#analyse">5. Analyse-Tools und Werbung</a></li>
+            <li><a href="#soziale-medien">6. Soziale Medien & Pixels</a></li>
+          </ul>
+          <div class="ds-toc__divider"></div>
+          <ul class="ds-toc__list">
+            <li><a href="impressum.html">→ Impressum</a></li>
+            <li><a href="index.html">→ Zurück zur Website</a></li>
+          </ul>
+        </aside>
+
+        <!-- Document -->
+        <div class="ds-doc">
+
+          <div class="ds-notice">
+            <div class="ds-notice__title">Kurz & klar: Was wir NICHT tun</div>
+            <p>Diese Website setzt <strong>keine Cookies</strong> ohne Ihre Zustimmung, betreibt <strong>kein verdecktes Tracking</strong> und verkauft <strong>keine Daten</strong> an Dritte. Analyse- und Marketing-Tools werden nur nach Ihrer ausdrücklichen Einwilligung über den Cookie-Banner aktiviert.</p>
+          </div>
+
+          <!-- 1 -->
+          <div class="ds-section" id="ueberblick">
+            <div class="ds-section__num">01</div>
+            <h2 class="ds-section__title">Datenschutz auf einen Blick</h2>
+
+            <h3>Allgemeine Hinweise</h3>
+            <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.</p>
+
+            <h3>Datenerfassung auf dieser Website</h3>
+            <p><strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br/>
+            Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Verantwortlicher" in dieser Datenschutzerklärung entnehmen.</p>
+            <p><strong>Wie erfassen wir Ihre Daten?</strong><br/>
+            Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen — etwa per E-Mail. Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.</p>
+            <p><strong>Wofür nutzen wir Ihre Daten?</strong><br/>
+            Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden — jedoch nur nach Ihrer ausdrücklichen Einwilligung.</p>
+            <p><strong>Welche Rechte haben Sie bezüglich Ihrer Daten?</strong><br/>
+            Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. Hierzu sowie zu weiteren Fragen können Sie sich jederzeit an uns wenden.</p>
+
+            <h3>Analyse-Tools und Tools von Drittanbietern</h3>
+            <p>Beim Besuch dieser Website kann Ihr Surf-Verhalten statistisch ausgewertet werden. Das geschieht vor allem mit sogenannten Analyseprogrammen sowie Marketing-Pixels. Detaillierte Informationen zu diesen Tools finden Sie in den Abschnitten 5 und 6 dieser Datenschutzerklärung. Diese Tools werden ausschließlich nach Ihrer ausdrücklichen Einwilligung über unseren Cookie-Banner aktiviert.</p>
+          </div>
+
+          <!-- 2 -->
+          <div class="ds-section" id="pflicht">
+            <div class="ds-section__num">02</div>
+            <h2 class="ds-section__title">Allgemeine Hinweise und Pflichtinformationen</h2>
+
+            <h3>Datenschutz</h3>
+            <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
+            <p>Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
+
+            <h3>Hinweis zur verantwortlichen Stelle</h3>
+            <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
+            <div class="ds-infobox">
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Unternehmen</span><span class="ds-infobox__value">MINDSOUL INTERNATIONAL LLC</span></div>
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Anschrift</span><span class="ds-infobox__value">2880 W Oakland Park Blvd, Suite 225C, Oakland Park, FL 33311, USA</span></div>
+              <div class="ds-infobox__row"><span class="ds-infobox__label">E-Mail</span><span class="ds-infobox__value"><a href="mailto:info@ai-agents-workshop.de">info@ai-agents-workshop.de</a></span></div>
+            </div>
+            <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet.</p>
+
+            <h3>Speicherdauer</h3>
+            <p>Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung haben (z. B. steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.</p>
+
+            <h3>Allgemeine Hinweise zu den Rechtsgrundlagen</h3>
+            <p>Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO. Sofern Sie in die Speicherung von Cookies oder den Zugriff auf Informationen in Ihr Endgerät eingewilligt haben, erfolgt die Datenverarbeitung zusätzlich auf Grundlage von § 25 Abs. 1 TDDDG. Die Einwilligung ist jederzeit widerrufbar. Sind Ihre Daten zur Vertragserfüllung erforderlich, verarbeiten wir Ihre Daten auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO. Des Weiteren verarbeiten wir Ihre Daten auf Grundlage unseres berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO, sofern dies jeweils angegeben ist.</p>
+
+            <h3>Hinweis zur Datenweitergabe in die USA</h3>
+            <p>Wir verwenden unter anderem Tools von Unternehmen mit Sitz in den USA. Wenn diese Tools aktiv sind, können Ihre personenbezogenen Daten in die USA übertragen und dort verarbeitet werden. Wir weisen darauf hin, dass die USA als sicherer Drittstaat grundsätzlich ein mit der EU vergleichbares Datenschutzniveau aufweisen kann, sofern der jeweilige Anbieter eine Zertifizierung unter dem „EU-US Data Privacy Framework" (DPF) besitzt oder über geeignete zusätzliche Garantien (Standardvertragsklauseln) verfügt. Informationen zu den jeweiligen Anbietern finden Sie in den nachfolgenden Abschnitten.</p>
+
+            <h3>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>
+            <p>Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen — der Widerruf muss dabei genauso einfach sein wie die Einwilligung (Art. 7 Abs. 3 DSGVO). Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.</p>
+            <p>Zum Widerruf klicken Sie auf den Link <strong>„Cookie-Einstellungen"</strong> im Footer dieser Website. Alternativ können Sie die Cookies in Ihrem Browser löschen — der Cookie-Banner erscheint dann bei Ihrem nächsten Besuch erneut.</p>
+
+            <h3>Widerspruchsrecht gegen Direktwerbung (Art. 21 DSGVO)</h3>
+            <p class="ds-caps">WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG IHRER PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN. DIE JEWEILIGE RECHTSGRUNDLAGE ENTNEHMEN SIE DIESER DATENSCHUTZERKLÄRUNG. WENN SIE WIDERSPRUCH EINLEGEN, WERDEN WIR IHRE BETROFFENEN PERSONENBEZOGENEN DATEN NICHT MEHR VERARBEITEN, ES SEI DENN, WIR KÖNNEN ZWINGENDE SCHUTZWÜRDIGE GRÜNDE NACHWEISEN, DIE IHRE INTERESSEN ÜBERWIEGEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO).</p>
+
+            <h3>Beschwerderecht bei der zuständigen Aufsichtsbehörde</h3>
+            <p>Im Falle von Verstößen gegen die DSGVO steht Ihnen ein Beschwerderecht bei einer Aufsichtsbehörde zu, insbesondere in dem Mitgliedstaat Ihres gewöhnlichen Aufenthalts oder des Orts des mutmaßlichen Verstoßes. Das Beschwerderecht besteht unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe. Eine Übersicht aller deutschen Datenschutzbehörden: <a href="https://www.bfdi.bund.de" target="_blank" rel="noopener">www.bfdi.bund.de</a></p>
+
+            <h3>Auskunft, Berichtigung und Löschung</h3>
+            <p>Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen wenden Sie sich jederzeit an: <a href="mailto:info@ai-agents-workshop.de">info@ai-agents-workshop.de</a></p>
+
+            <h3>Recht auf Einschränkung der Verarbeitung</h3>
+            <p>Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Dies ist möglich wenn:</p>
+            <ul>
+              <li>Sie die Richtigkeit Ihrer bei uns gespeicherten Daten bestreiten (für die Dauer der Überprüfung),</li>
+              <li>die Verarbeitung unrechtmäßig war und Sie statt der Löschung die Einschränkung verlangen,</li>
+              <li>wir die Daten nicht mehr benötigen, Sie sie jedoch zur Geltendmachung von Rechtsansprüchen benötigen, oder</li>
+              <li>Sie einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt haben und noch nicht feststeht, wessen Interessen überwiegen.</li>
+            </ul>
+
+            <h3>Recht auf Datenübertragbarkeit</h3>
+            <p>Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen.</p>
+
+            <h3>SSL- bzw. TLS-Verschlüsselung</h3>
+            <p>Diese Seite nutzt aus Sicherheitsgründen eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile. Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.</p>
+
+            <h3>Widerspruch gegen Werbe-E-Mails</h3>
+            <p>Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten zur Übersendung von nicht ausdrücklich angeforderter Werbung wird hiermit widersprochen. Die Betreiber behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-E-Mails, vor.</p>
+          </div>
+
+          <!-- 3 -->
+          <div class="ds-section" id="hosting">
+            <div class="ds-section__num">03</div>
+            <h2 class="ds-section__title">Hosting</h2>
+
+            <h3>Hostinger</h3>
+            <p>Wir hosten die Inhalte unserer Website bei Hostinger. Anbieter ist die Hostinger International Ltd., 61 Lordou Vironos Street, 6023 Larnaca, Zypern (nachfolgend Hostinger). Details entnehmen Sie der Datenschutzerklärung von Hostinger: <a href="https://www.hostinger.com/privacy-policy" target="_blank" rel="noopener">hostinger.com/privacy-policy</a>.</p>
+            <p>Wenn Sie unsere Website besuchen, werden Ihre personenbezogenen Daten auf den Servern von Hostinger verarbeitet. Hierbei können folgende Daten in Server-Logfiles erfasst werden:</p>
+            <ul>
+              <li>IP-Adresse des anfragenden Geräts</li>
+              <li>Datum und Uhrzeit des Zugriffs</li>
+              <li>Aufgerufene URL und übertragene Datenmenge</li>
+              <li>Browsertyp, -version und Betriebssystem</li>
+              <li>Referrer-URL (zuvor besuchte Seite)</li>
+              <li>HTTP-Statuscode</li>
+            </ul>
+            <p>Diese Daten werden nicht mit anderen Datenquellen zusammengeführt und dienen ausschließlich der Sicherstellung eines störungsfreien Betriebs.</p>
+            <p>Die Verwendung von Hostinger erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG. Die Einwilligung ist jederzeit widerrufbar.</p>
+            <div class="ds-infobox">
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Speicherdauer</span><span class="ds-infobox__value">In der Regel 7 Tage, danach automatische Löschung</span></div>
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Rechtsgrundlage</span><span class="ds-infobox__value">Art. 6 Abs. 1 lit. f DSGVO</span></div>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="ds-section" id="datenerfassung">
+            <div class="ds-section__num">04</div>
+            <h2 class="ds-section__title">Datenerfassung auf dieser Website</h2>
+
+            <h3>Cookies</h3>
+            <p>Unsere Website verwendet Cookies ausschließlich nach Ihrer ausdrücklichen Einwilligung. Cookies sind kleine Datenpakete, die auf Ihrem Endgerät gespeichert werden. Wir unterscheiden zwischen:</p>
+            <ul>
+              <li><strong>Session-Cookies:</strong> Werden nach Ende Ihres Besuchs automatisch gelöscht.</li>
+              <li><strong>Permanente Cookies:</strong> Bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen oder eine automatische Löschung durch Ihren Browser erfolgt.</li>
+            </ul>
+            <p>Cookies, die zur Analyse des Nutzerverhaltens oder zu Werbezwecken eingesetzt werden, werden ausschließlich auf Grundlage Ihrer Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG verarbeitet. Die Einwilligung ist jederzeit widerrufbar.</p>
+            <p>Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben oder generell ausschließen.</p>
+
+            <h3>Schriftarten (lokal gehostet)</h3>
+            <p>Diese Website verwendet die Schriftart <strong>Inter</strong> zur einheitlichen Darstellung von Texten. Die Schriftdateien sind vollständig auf unserem eigenen Server (Hostinger) gespeichert und werden von dort ausgeliefert. Es wird <strong>keine Verbindung zu Google-Servern oder anderen externen Diensten</strong> hergestellt. Ihre IP-Adresse wird dabei nicht an Google oder Dritte übertragen.</p>
+            <p>Da keine Daten an externe Anbieter übermittelt werden, entsteht durch die Schriftdarstellung kein datenschutzrechtlich relevanter Vorgang im Sinne der DSGVO gegenüber Dritten.</p>
+
+            <h3>Kommunikation via WhatsApp</h3>
+            <p>Für die Kommunikation mit unseren Kunden und Interessenten nutzen wir unter anderem den Instant-Messaging-Dienst <strong>WhatsApp</strong>. Anbieter ist die WhatsApp Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland.</p>
+            <p>Die Kommunikation erfolgt über eine Ende-zu-Ende-Verschlüsselung (Peer-to-Peer), die verhindert, dass WhatsApp oder sonstige Dritte Zugriff auf die Kommunikationsinhalte erlangen können. WhatsApp erhält jedoch Zugriff auf Metadaten, die im Zuge des Kommunikationsvorgangs entstehen (z. B. Absender, Empfänger und Zeitpunkt). Wir weisen darauf hin, dass WhatsApp nach eigener Aussage personenbezogene Daten seiner Nutzer mit seiner in den USA ansässigen Konzernmutter Meta teilt.</p>
+            <p>Der Einsatz von WhatsApp erfolgt auf Grundlage unseres berechtigten Interesses an einer möglichst schnellen und effektiven Kommunikation mit Kunden und Interessenten (Art. 6 Abs. 1 lit. f DSGVO). Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Datenverarbeitung ausschließlich auf Grundlage der Einwilligung; diese ist jederzeit mit Wirkung für die Zukunft widerrufbar.</p>
+            <p>Die zwischen Ihnen und uns auf WhatsApp ausgetauschten Kommunikationsinhalte verbleiben bei uns, bis Sie uns zur Löschung auffordern oder der Zweck für die Datenspeicherung entfällt. Das Unternehmen verfügt über eine Zertifizierung nach dem „EU-US Data Privacy Framework" (DPF). Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt.</p>
+            <div class="ds-infobox">
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Rechtsgrundlage</span><span class="ds-infobox__value">Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</span></div>
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Datenschutzerklärung</span><span class="ds-infobox__value"><a href="https://www.whatsapp.com/legal/#privacy-policy" target="_blank" rel="noopener">whatsapp.com/legal/privacy-policy</a></span></div>
+            </div>
+
+            <h3>Terminbuchung via Calendly</h3>
+            <p>Auf unserer Website haben Sie die Möglichkeit, Termine mit uns zu vereinbaren. Für die Terminbuchung nutzen wir das Tool <strong>Calendly</strong>. Anbieter ist die Calendly LLC, 271 17th St NW, 10th Floor, Atlanta, Georgia 30363, USA (nachfolgend „Calendly").</p>
+            <p>Zum Zweck der Terminbuchung geben Sie die abgefragten Daten und den Wunschtermin in die dafür vorgesehene Maske ein. Die eingegebenen Daten werden für die Planung, Durchführung und ggf. für die Nachbereitung des Termins verwendet. Die Termindaten werden auf den Servern von Calendly gespeichert.</p>
+            <p>Die von Ihnen eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt. Zwingende gesetzliche Bestimmungen bleiben unberührt. Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt.</p>
+            <div class="ds-infobox">
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Rechtsgrundlage</span><span class="ds-infobox__value">Art. 6 Abs. 1 lit. f DSGVO; sofern Cookies gesetzt werden: Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG (Einwilligung)</span></div>
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Datenschutzerklärung</span><span class="ds-infobox__value"><a href="https://calendly.com/privacy" target="_blank" rel="noopener">calendly.com/privacy</a></span></div>
+              <div class="ds-infobox__row"><span class="ds-infobox__label">AVV / DPA</span><span class="ds-infobox__value"><a href="https://calendly.com/pages/dpa" target="_blank" rel="noopener">calendly.com/pages/dpa</a></span></div>
+            </div>
+
+            <h3>Anfrage per E-Mail</h3>
+            <p>Wenn Sie uns per E-Mail kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+            <p>Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).</p>
+            <p>Die von Ihnen an uns übersandten Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt. Zwingende gesetzliche Bestimmungen — insbesondere gesetzliche Aufbewahrungsfristen — bleiben unberührt.</p>
+          </div>
+
+          <!-- 5 -->
+          <div class="ds-section" id="analyse">
+            <div class="ds-section__num">05</div>
+            <h2 class="ds-section__title">Analyse-Tools und Werbung</h2>
+            <p>Die nachfolgenden Tools werden ausschließlich nach Ihrer ausdrücklichen Einwilligung über unseren Cookie-Banner aktiviert (Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG). Die Einwilligung ist jederzeit widerrufbar.</p>
+
+            <h3>Google Analytics</h3>
+            <p>Diese Website nutzt Funktionen des Webanalysedienstes <strong>Google Analytics</strong>. Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland.</p>
+            <p>Google Analytics ermöglicht es dem Websitebetreiber, das Verhalten der Websitebesucher zu analysieren. Hierbei erhält der Websitebetreiber verschiedene Nutzungsdaten, wie z. B. Seitenaufrufe, Verweildauer, verwendete Betriebssysteme und Herkunft des Nutzers. Diese Daten werden dem jeweiligen Endgerät des Users zugeordnet.</p>
+            <p>Die von Google erfassten Informationen über die Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Details finden Sie hier: <a href="https://privacy.google.com/businesses/controllerterms/mccs/" target="_blank" rel="noopener">privacy.google.com/businesses/controllerterms/mccs/</a>. Das Unternehmen verfügt über eine Zertifizierung nach dem „EU-US Data Privacy Framework" (DPF).</p>
+            <p>Wir haben mit Google einen Vertrag zur Auftragsverarbeitung (AVV) gemäß Art. 28 DSGVO abgeschlossen.</p>
+            <div class="ds-infobox">
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Rechtsgrundlage</span><span class="ds-infobox__value">Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG (Einwilligung)</span></div>
+              <div class="ds-infobox__row"><span class="ds-infobox__label">AVV</span><span class="ds-infobox__value">Art. 28 DSGVO — mit Google abgeschlossen</span></div>
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Datenschutzerklärung</span><span class="ds-infobox__value"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></span></div>
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Opt-Out</span><span class="ds-infobox__value"><a href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank" rel="noopener">Browser-Plugin herunterladen</a></span></div>
+            </div>
+
+            <h3>Google Ads</h3>
+            <p>Der Websitebetreiber verwendet <strong>Google Ads</strong>. Google Ads ermöglicht es uns, Werbeanzeigen in der Google-Suchmaschine oder auf Drittwebseiten auszuspielen, wenn der Nutzer bestimmte Suchbegriffe bei Google eingibt (Keyword-Targeting). Ferner können zielgerichtete Werbeanzeigen anhand der bei Google vorhandenen Nutzerdaten ausgespielt werden (Zielgruppen-Targeting). Google Ads ermöglicht außerdem Conversion-Tracking für YouTube-Werbung.</p>
+            <p>Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Das Unternehmen verfügt über eine Zertifizierung nach dem DPF.</p>
+            <div class="ds-infobox">
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Rechtsgrundlage</span><span class="ds-infobox__value">Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG (Einwilligung)</span></div>
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Datenschutzerklärung</span><span class="ds-infobox__value"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></span></div>
+            </div>
+
+            <h3>Microsoft Clarity</h3>
+            <p>Diese Website nutzt <strong>Microsoft Clarity</strong>. Anbieter ist die Microsoft Corporation, One Microsoft Way, Redmond, WA 98052-6399, USA. Microsoft Clarity erstellt Heatmaps und Session-Recordings, um das Nutzerverhalten visuell auszuwerten. Dabei werden Klicks, Scrolltiefe und Mausbewegungen erfasst. Die Session-Recordings können personenbezogene Daten enthalten, die im Rahmen der Sitzung eingegeben werden.</p>
+            <p>Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Das Unternehmen verfügt über eine Zertifizierung nach dem DPF. Wir haben mit Microsoft einen Vertrag zur Auftragsverarbeitung (AVV) gemäß Art. 28 DSGVO abgeschlossen.</p>
+            <div class="ds-infobox">
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Rechtsgrundlage</span><span class="ds-infobox__value">Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG (Einwilligung)</span></div>
+              <div class="ds-infobox__row"><span class="ds-infobox__label">AVV</span><span class="ds-infobox__value">Art. 28 DSGVO — mit Microsoft abgeschlossen</span></div>
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Datenschutzerklärung</span><span class="ds-infobox__value"><a href="https://privacy.microsoft.com/de-de/privacystatement" target="_blank" rel="noopener">privacy.microsoft.com</a></span></div>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="ds-section" id="soziale-medien">
+            <div class="ds-section__num">06</div>
+            <h2 class="ds-section__title">Soziale Medien & Marketing-Pixels</h2>
+            <p>Wir setzen nach Ihrer Einwilligung Marketing-Pixels der folgenden Plattformen ein. Diese Pixels ermöglichen Conversion-Tracking und zielgerichtetes Retargeting für Werbekampagnen. Die Nutzung erfolgt ausschließlich auf Grundlage Ihrer Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG. Die Einwilligung ist jederzeit widerrufbar.</p>
+
+            <h3>Meta Pixel (Facebook & Instagram)</h3>
+            <p>Auf dieser Website ist das <strong>Meta Pixel</strong> integriert. Anbieter ist die Meta Platforms Ireland Limited, Merrion Road, Dublin 4, D04 X2K5, Irland. Die erfassten Daten werden nach Aussage von Meta auch in die USA übertragen.</p>
+            <p>Wenn das Meta Pixel aktiv ist, wird beim Besuch dieser Website eine direkte Verbindung zu den Servern von Meta hergestellt. Meta erhält dadurch die Information, dass Sie mit Ihrer IP-Adresse diese Website besucht haben. Das Pixel ermöglicht das Messen der Wirksamkeit von Werbeanzeigen sowie zielgerichtetes Retargeting.</p>
+            <p>Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Das Unternehmen verfügt über eine Zertifizierung nach dem DPF.</p>
+            <p>Soweit mit Hilfe des Meta Pixels personenbezogene Daten auf unserer Website erfasst und an Meta weitergeleitet werden, sind wir und die Meta Platforms Ireland Limited gemeinsam für diese Datenverarbeitung verantwortlich (Art. 26 DSGVO). Die gemeinsame Verantwortlichkeit beschränkt sich dabei ausschließlich auf die Erfassung der Daten und deren Weitergabe an Meta. Die nach der Weiterleitung erfolgende Verarbeitung durch Meta ist nicht Teil der gemeinsamen Verantwortung. Betroffenenrechte (z. B. Auskunftsersuchen) können direkt bei Meta geltend gemacht werden.</p>
+            <div class="ds-infobox">
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Rechtsgrundlage</span><span class="ds-infobox__value">Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG (Einwilligung)</span></div>
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Gemeinsame Verantwortung</span><span class="ds-infobox__value">Art. 26 DSGVO — mit Meta Platforms Ireland Limited</span></div>
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Datenschutzerklärung</span><span class="ds-infobox__value"><a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener">facebook.com/privacy/policy</a></span></div>
+            </div>
+
+            <h3>LinkedIn Insight Tag</h3>
+            <p>Diese Website nutzt das <strong>LinkedIn Insight Tag</strong>. Anbieter ist die LinkedIn Ireland Unlimited Company, Wilton Plaza, Wilton Place, Dublin 2, Irland.</p>
+            <p>Der LinkedIn Insight Tag ermöglicht Conversion-Tracking und Retargeting für LinkedIn-Werbekampagnen sowie demografische Erkenntnisse über Besucher (z. B. Berufsbezeichnung, Branche, Unternehmensgröße). Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt.</p>
+            <div class="ds-infobox">
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Rechtsgrundlage</span><span class="ds-infobox__value">Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG (Einwilligung)</span></div>
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Datenschutzerklärung</span><span class="ds-infobox__value"><a href="https://www.linkedin.com/legal/privacy-policy" target="_blank" rel="noopener">linkedin.com/legal/privacy-policy</a></span></div>
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Opt-Out</span><span class="ds-infobox__value"><a href="https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out" target="_blank" rel="noopener">LinkedIn Opt-Out</a></span></div>
+            </div>
+
+            <h3>X (Twitter) Pixel</h3>
+            <p>Auf dieser Website ist das <strong>X (Twitter) Pixel</strong> integriert. Anbieter ist die X Corp., 1355 Market Street, Suite 900, San Francisco, CA 94103, USA. Für Personen außerhalb der USA ist die Twitter International Unlimited Company, One Cumberland Place, Fenian Street, Dublin 2, Irland verantwortlich.</p>
+            <p>Das Pixel misst die Wirkung von Werbekampagnen auf X und ermöglicht zielgerichtetes Retargeting. Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt.</p>
+            <div class="ds-infobox">
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Rechtsgrundlage</span><span class="ds-infobox__value">Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG (Einwilligung)</span></div>
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Datenschutzerklärung</span><span class="ds-infobox__value"><a href="https://twitter.com/privacy" target="_blank" rel="noopener">twitter.com/privacy</a></span></div>
+            </div>
+
+            <h3>TikTok Pixel</h3>
+            <p>Auf dieser Website ist das <strong>TikTok Pixel</strong> integriert. Anbieter ist die TikTok Technology Limited, 10 Earlsfort Terrace, Dublin D02 T380, Irland.</p>
+            <p>Das TikTok Pixel erfasst Seitenbesuche und Nutzerinteraktionen zur Messung und Optimierung von TikTok-Werbekampagnen. Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt.</p>
+            <div class="ds-infobox">
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Rechtsgrundlage</span><span class="ds-infobox__value">Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG (Einwilligung)</span></div>
+              <div class="ds-infobox__row"><span class="ds-infobox__label">Datenschutzerklärung</span><span class="ds-infobox__value"><a href="https://www.tiktok.com/legal/page/eea/privacy-policy" target="_blank" rel="noopener">tiktok.com/legal/privacy-policy</a></span></div>
+            </div>
+          </div>
+
+          <div class="ds-stand">
+            Stand: Mai 2026 · Diese Datenschutzerklärung wird bei Änderungen der Website oder der Rechtslage aktualisiert.
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <div class="footer__logo-mark">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            AI Agents Workshop
+          </div>
+          <p class="footer__desc">Professionelle AI-Agents-Schulungen und Done-For-You-Integration für Unternehmen im DACH-Raum. 100% Remote. DSGVO-konform. EU AI Act ready.</p>
+        </div>
+        <div>
+          <div class="footer__col-title">Leistungen</div>
+          <div class="footer__links">
+            <a href="index.html#loesungen">AI Agents Training</a>
+            <a href="index.html#loesungen">Done-For-You Integration</a>
+            <a href="index.html#kontakt">Analysegespräch</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">Ressourcen</div>
+          <div class="footer__links">
+            <a href="index.html#prozess">Unser Prozess</a>
+            <a href="index.html#compliance">Compliance</a>
+            <a href="index.html#vertrauen">Ergebnisse</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">Unternehmen</div>
+          <div class="footer__links">
+            <a href="mailto:info@ai-agents-workshop.de">Kontakt</a>
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+            <a href="#" onclick="localStorage.removeItem('aaw_consent_v1');location.reload();return false;">Cookie-Einstellungen</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 AI Agents Workshop · Betrieben von MINDSOUL INTERNATIONAL LLC · Alle Rechte vorbehalten.</p>
+        <div class="footer__legal">
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="impressum.html">Impressum</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

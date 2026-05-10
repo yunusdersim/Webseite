@@ -4,7 +4,103 @@
    Font: Inter
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+/* ── Cookie Banner ── */
+.cookie-banner {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 760px;
+  background: #0F172A;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 16px;
+  box-shadow: 0 24px 64px rgba(0,0,0,.4);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  z-index: 9999;
+  animation: cookieSlide .4s cubic-bezier(.4,0,.2,1);
+}
+.cookie-banner--hidden {
+  display: none;
+}
+@keyframes cookieSlide {
+  from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+.cookie-banner__text {
+  flex: 1;
+  min-width: 0;
+}
+.cookie-banner__text strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.cookie-banner__text p {
+  font-size: 13px;
+  color: rgba(255,255,255,.55);
+  line-height: 1.5;
+}
+.cookie-banner__text a {
+  color: #60A5FA;
+  text-decoration: underline;
+}
+.cookie-banner__actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.cookie-banner__btn {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: opacity .15s;
+  white-space: nowrap;
+}
+.cookie-banner__btn:hover { opacity: .85; }
+.cookie-banner__btn--reject {
+  background: rgba(255,255,255,.08);
+  color: rgba(255,255,255,.8);
+}
+.cookie-banner__btn--accept {
+  background: #2563EB;
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .cookie-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    bottom: 16px;
+    width: calc(100% - 32px);
+  }
+  .cookie-banner__actions { width: 100%; }
+  .cookie-banner__btn { flex: 1; text-align: center; }
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('fonts/inter-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('fonts/inter-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 :root {
   --white:   #FFFFFF;
@@ -336,6 +432,24 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 }
 .testi-card__name { font-size: 13px; font-weight: 700; color: var(--ink); }
 .testi-card__role { font-size: 12px; color: var(--muted); }
+.testi__dots { display: none; }
+@media (max-width: 767px) {
+  .testi__carousel { overflow: hidden; }
+  .testi__grid {
+    display: flex; flex-wrap: nowrap; gap: 12px; margin-top: 36px;
+    transition: transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+  }
+  .testi-card { flex: 0 0 85%; min-width: 0; }
+  .testi__dots {
+    display: flex; justify-content: center; gap: 6px; margin-top: 20px;
+  }
+  .testi__dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--border); transition: background .3s, width .3s, border-radius .3s;
+    cursor: pointer;
+  }
+  .testi__dot--active { background: var(--blue); width: 18px; border-radius: 3px; }
+}
 
 /* ============================================
    PROZESS
